@@ -1,7 +1,10 @@
-# first page displays all mangas available as seperate folders
-# each folder contain sub-folders for chapters and a thumbnail file
-# at index page look for all manga folders and show them in the format
-# manga name and thumbnail is present for every manga
-
 from flask import Flask
+from flask import render_template
 
+app = Flask(__name__)
+
+@app.route('/')
+@app.route('/index/<name>')
+@app.route('/home/<name>')
+def index(name=None):
+    return render_template('index.html', name=name)
