@@ -9,13 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 
-
-def fix_name(name):
-    for c in ['\\', '/', ':', '*', '?', '"', '<', '>', '|']:
-        if c in name:
-            name = name.replace(c, '')
-    name = name.strip('.').strip(' ')
-    return name
+from helpers import fix_name
 
 
 chrome_options = webdriver.ChromeOptions()
