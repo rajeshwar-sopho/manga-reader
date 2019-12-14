@@ -1,4 +1,5 @@
 venv/
+sel-env/
 
 *.pyc
 __pycache__/
@@ -12,3 +13,5 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+
+reader/mangas/
